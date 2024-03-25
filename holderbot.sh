@@ -205,8 +205,8 @@ while true; do
     fi
 done
 
-crontab -l | grep -vF "/bin/bash javad/holderbot/restart.sh" | crontab -
-cronjob="@reboot sleep 20 && /bin/bash /holderbot/restart.sh"
+crontab -l | grep -vF "/bin/bash /javad/holderbot/restart.sh" | crontab -
+cronjob="@reboot sleep 20 && /bin/bash /javad/holderbot/restart.sh"
 if ! crontab -l | grep -Fq "$cronjob" >/dev/null 2>&1; then
   (crontab -l 2>/dev/null; echo "$cronjob") | crontab -
 fi
