@@ -5,7 +5,7 @@ pkill -f holder.py
 pkill -f expired.py 
 pkill -f limiteder.py 
 cd
-cd /holderbot
+cd /javad/holderbot
 source hold/bin/activate
 chmod +x monitoring.py
 chmod +x holder.py
